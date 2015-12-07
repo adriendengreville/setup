@@ -36,7 +36,7 @@ printf "\n#### Installing from downloaded resources"
 cd dl
 
 printf "\n--> Intellij Idea"
-if [ ! -d "~\intellij" ]; then
+if [ ! -d "/home/$1/intellij" ]; then
 	mkdir /home/$1/intellij
 	if ! ls idea* 1> /dev/null 2>&1; then
 		tar -xzvf idea.tar.gz
@@ -47,7 +47,7 @@ if [ ! -d "~\intellij" ]; then
 fi
 
 printf "\n--> CLion"
-if [ ! -d "~\clion" ]; then
+if [ ! -d "/home/$1/clion" ]; then
 	mkdir /home/$1/clion
 	if ! ls clion* 1> /dev/null 2>&1; then
 		tar -xzvf clion.tar.gz
