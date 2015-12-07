@@ -27,7 +27,7 @@ fi
 
 printf "\n\n###### Downloading awesome themes resources\n"
 if [ ! -d "awesome-copycats" ]; then
-	git clone https://github.com/copycat-killer/awesome-copycats.git"
+	git clone https://github.com/copycat-killer/awesome-copycats.git
 fi
 
 printf "\n\n###### Adding repos\n"
