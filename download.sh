@@ -30,6 +30,10 @@ if [ ! -d "awesome-copycats" ]; then
 	git clone https://github.com/copycat-killer/awesome-copycats.git
 fi
 
+if [ ! -d "awesome-copycats/lain" ]; then
+	git clone https://github.com/copycat-killer/lain.git
+fi
+
 printf "\n\n###### Adding repos\n"
 printf "\t--> Google Chrome\n"
 echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list

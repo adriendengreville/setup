@@ -12,7 +12,7 @@ printf "\t-> load guake on startup \n"
 	ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart/
 
 printf "\t-> copying awesome config \n"
-	cp -r awesome-copycats /home/$1/.config/awesome
+	cp -r dl/awesome-copycats/* /home/$1/.config/awesome
 	cp pref/rc.lua /home/$1/.config/awesome	
 
 printf "\t-> setting awesome config \n"
