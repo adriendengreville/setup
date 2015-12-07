@@ -6,7 +6,7 @@ apt-get install aptitude
 aptitude install vim
 aptitude install build-essential
 aptitude install cmake
-aptitude install aria2c
+aptitude install aria2
 aptitude install proxychains
 aptitude install git
 aptitude install maven
@@ -24,7 +24,9 @@ cd dl
 printf "\n--> Intellij Idea"
 if [ ! -d "~\intellij" ]; then
 	mkdir /home/$1/intellij
-	tar -xzvf idea.tar.gz
+	if [ ! -d idea* ]; then
+		tar -xzvf idea.tar.gz
+	fi
 	cd idea*
 	cp -r * /home/$1/intellij
         cd .. 
@@ -33,7 +35,9 @@ fi
 printf "\n--> CLion"
 if [ ! -d "~\clion" ]; then
 	mkdir /home/$1/clion
-	tar -xzvf clion.tar.gz
+	if [ ! -d clion* ]; then
+		tar -xzvf clion.tar.gz
+	fi
 	cd clion*
 	cp -r * /home/$1/clion
         cd .. 
@@ -43,4 +47,3 @@ printf "\n--> Guake fonts"
 cd fonts
 ./install.sh
 cd ..
-rm -rf fonts
