@@ -42,6 +42,6 @@ Package: *
 Pin: release a=unstable
 Pin-Priority: 600" >> /etc/apt/preferences
 
-printf "\n\n ================ Cloning done ================"
+printf "\n\n ================ Cloning done ================\n"
 
 cd ..
