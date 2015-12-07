@@ -6,18 +6,22 @@ cd dl
 printf "========== Cloning from repos ==========\n"
 
 printf "###### Guake theme \n"
-git clone https://github.com/coolwanglu/guake-colors-solarized.git
+if [ ! -d "guake-colors-solarized" ]; then
+	git clone https://github.com/coolwanglu/guake-colors-solarized.git
+fi
 
 printf "\n\n###### Guake fonts\n"
-git clone https://github.com/powerline/fonts.git
+if [ ! -d "fonts" ]; then
+	git clone https://github.com/powerline/fonts.git
+fi
 
 printf "\n\n###### Downloading Intellij\n"
-if [ ! -f idea* ]; then
+if [ ! -f "idea*" ]; then
 	wget http://repo.dengreville.fr/soft/idea.tar.gz
 fi
 
 printf "\n\n###### Downloading CLion\n"
-if [ ! -f clion* ]; then
+if [ ! -f "clion*" ]; then
 	wget http://repo.dengreville.fr/soft/clion.tar.gz
 fi
 
