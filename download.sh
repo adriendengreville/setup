@@ -17,7 +17,7 @@ if [ ! -f idea* ]; then
 fi
 
 printf "\n\n###### Downloading CLion\n"
-if [ ! -f clion*]; then
+if [ ! -f clion* ]; then
 	wget http://repo.dengreville.fr/soft/clion.tar.gz
 fi
 

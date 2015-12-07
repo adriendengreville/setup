@@ -22,7 +22,7 @@ printf "\n#### Installing from downloaded resources"
 cd dl
 
 printf "\n--> Intellij Idea"
-if [! -d "~\intellij" ]; then
+if [ ! -d "~\intellij" ]; then
 	mkdir ~/intellij
 	tar -xzvf idea.tar.gz
 	cd idea*
@@ -31,10 +31,10 @@ if [! -d "~\intellij" ]; then
 fi
 
 printf "\n--> CLion"
-if [! -d "~\clion" ]; then
+if [ ! -d "~\clion" ]; then
 	mkdir ~/clion
 	tar -xzvf clion.tar.gz
-	cd idea*
+	cd clion*
 	cp -r * ~/clion
         cd .. 
 fi
