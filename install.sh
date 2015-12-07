@@ -23,7 +23,7 @@ printf "\t-> maven \n"
 printf "\t-> zsh \n"
 	aptitude install zsh
 printf "\t-> ohmyszsh (need fix) \n"
-#	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+	su $1 -c "sh -c '$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)'"
 printf "\t-> guake \n"
 	aptitude install guake
 printf "\t-> awesome \n"
