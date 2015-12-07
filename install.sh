@@ -24,7 +24,7 @@ cd dl
 printf "\n--> Intellij Idea"
 if [ ! -d "~\intellij" ]; then
 	mkdir /home/$1/intellij
-	if ls idea* 1> /dev/null 2>&1; then
+	if ! ls idea* 1> /dev/null 2>&1; then
 		tar -xzvf idea.tar.gz
 	fi
 	cd idea*
@@ -35,7 +35,7 @@ fi
 printf "\n--> CLion"
 if [ ! -d "~\clion" ]; then
 	mkdir /home/$1/clion
-	if ls clion* 1> /dev/null 2>&1; then
+	if ! ls clion* 1> /dev/null 2>&1; then
 		tar -xzvf clion.tar.gz
 	fi
 	cd clion*
