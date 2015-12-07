@@ -2,6 +2,8 @@
 printf "========== Installing ==========\n"
 
 printf "\n#### Installing from live resources\n"
+printf "\n#RELOAD REPOS#\n"
+	apt-get update
 printf "\t-> aptitude \n"
 	apt-get install aptitude
 printf "\t-> vim \n"
@@ -20,8 +22,8 @@ printf "\t-> maven \n"
 	aptitude install maven
 printf "\t-> zsh \n"
 	aptitude install zsh
-printf "\t-> ohmyszsh \n"
-	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+printf "\t-> ohmyszsh (need fix) \n"
+#	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 printf "\t-> guake \n"
 	aptitude install guake
 printf "\t-> awesome \n"
