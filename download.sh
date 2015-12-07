@@ -24,8 +24,19 @@ fi
 printf "\n\n###### Adding repos\n"
 printf "\t--> Google Chrome\n"
 echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
-#printf "\t--> Sid for Awesome\n"
-#echo "deb http://ftp.de.debian.org/debian unstable main non-free contrib" >> /etc/apt/sources.list
+printf "\t--> Sid for Awesome\n"
+echo "deb http://ftp.de.debian.org/debian unstable main non-free contrib" >> /etc/apt/sources.list
+echo "Package: *
+Pin: release a=stable
+Pin-Priority: 700
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 650
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: 600" >> /etc/apt/preferences
 
 printf "\n\n ================ Cloning done ================"
 
