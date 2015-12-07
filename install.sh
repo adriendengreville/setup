@@ -2,20 +2,34 @@
 printf "========== Installing ==========\n"
 
 printf "\n#### Installing from live resources\n"
-apt-get install aptitude
-aptitude install vim
-aptitude install build-essential
-aptitude install cmake
-aptitude install aria2
-aptitude install proxychains
-aptitude install git
-aptitude install maven
-aptitude install zsh
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-aptitude install guake
-apt-get -t unstable install awesome/unstable
-aptitude install awesome-extra
-aptitude install google-chrome
+printf "\t-> aptitude \n"
+	apt-get install aptitude
+printf "\t-> vim \n"
+	aptitude install vim
+printf "\t-> build-essential \n"
+	aptitude install build-essential
+printf "\t-> cmake \n"
+	aptitude install cmake
+printf "\t-> aria2c \n"
+	aptitude install aria2
+printf "\t-> proxychains \n"
+	aptitude install proxychains
+printf "\t-> git \n"
+	aptitude install git
+printf "\t-> maven \n"
+	aptitude install maven
+printf "\t-> zsh \n"
+	aptitude install zsh
+printf "\t-> ohmyszsh \n"
+	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+printf "\t-> guake \n"
+	aptitude install guake
+printf "\t-> awesome \n"
+	apt-get -t unstable install awesome/unstable
+printf "\t-> awesome-extra \n"
+	aptitude install awesome-extra
+printf "\t-> google-chrome \n"
+	aptitude install google-chrome
 
 
 printf "\n#### Installing from downloaded resources"
