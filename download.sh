@@ -12,10 +12,14 @@ printf "\n\n###### Guake fonts\n"
 git clone https://github.com/powerline/fonts.git
 
 printf "\n\n###### Downloading Intellij\n"
-wget http://repo.dengreville.fr/soft/idea.tar.gz
+if [ ! -f idea* ]; then
+	wget http://repo.dengreville.fr/soft/idea.tar.gz
+fi
 
 printf "\n\n###### Downloading CLion\n"
-wget http://repo.dengreville.fr/soft/clion.tar.gz
+if [ ! -f clion*]; then
+	wget http://repo.dengreville.fr/soft/clion.tar.gz
+fi
 
 printf "\n\n###### Adding repos\n"
 printf "\t--> Google Chrome\n"
