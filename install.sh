@@ -13,7 +13,7 @@ aptitude install maven
 aptitude install zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 aptitude install guake
-aptitude install awesome/unstable
+apt-get -t unstable install awesome/unstable
 aptitude install awesome-extra
 aptitude install google-chrome
 
@@ -24,7 +24,7 @@ cd dl
 printf "\n--> Intellij Idea"
 if [ ! -d "~\intellij" ]; then
 	mkdir /home/$1/intellij
-	if [ ! -d idea* ]; then
+	if ls idea* 1> /dev/null 2>&1; then
 		tar -xzvf idea.tar.gz
 	fi
 	cd idea*
@@ -35,7 +35,7 @@ fi
 printf "\n--> CLion"
 if [ ! -d "~\clion" ]; then
 	mkdir /home/$1/clion
-	if [ ! -d clion* ]; then
+	if ls clion* 1> /dev/null 2>&1; then
 		tar -xzvf clion.tar.gz
 	fi
 	cd clion*
