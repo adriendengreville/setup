@@ -43,6 +43,7 @@ if [ ! -d "/home/$1/intellij" ]; then
 	fi
 	cd idea*
 	cp -r * /home/$1/intellij
+	chown $1:$1 /home/$1/intellij -R
         cd .. 
 fi
 
@@ -54,7 +55,8 @@ if [ ! -d "/home/$1/clion" ]; then
 	fi
 	cd clion*
 	cp -r * /home/$1/clion
-        cd .. 
+        chown $1:$1 /home/$1/clion -R
+	cd .. 
 fi
 
 printf "\n--> Guake fonts"
