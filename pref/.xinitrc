@@ -1,5 +1,1 @@
-guake&
-
-source /home/didien/.zshrc
-
-exec awesome
+/home/didien/.xinitrc
