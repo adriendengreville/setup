@@ -479,18 +479,28 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
     awful.key({ altkey,           }, "h",      function () fswidget.show(7) end),
 
+
+	-- SON & LUMIERE --
+	awful.key({ }, "XF86MonBrightnessUp", 		function() awful.util.spawn("xbacklight -inc 10") end),
+    	awful.key({ }, "XF86MonBrightnessDown", 	function() awful.util.spawn("xbacklight -dec 10") end),
+   	--awful.key({ }, "XF86AudioRaiseVolume", 		function() volumewidget.update(); awful.util.spawn("amixer set Master 10%+") end),
+    	--awful.key({ }, "XF86AudioLowerVolume", 		function() awful.util.spawn("amixer set Master 10%-") end),
+    	--awful.key({ }, "XF86AudioMute", 		function() awful.util.spawn("amixer set Master toggle") end),
+    	--awful.key({ }, "XF86AudioLowerVolume unmute", 	function() awful.util.spawn("amixer set Master 5%-") end),
+
+
     -- ALSA volume control
-    awful.key({ altkey }, "Up",
+    awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer set %s 1%%+", volumewidget.channel))
+            os.execute(string.format("amixer set %s 10%%+", volumewidget.channel))
             volumewidget.update()
         end),
-    awful.key({ altkey }, "Down",
+    awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer set %s 1%%-", volumewidget.channel))
+            os.execute(string.format("amixer set %s 10%%-", volumewidget.channel))
             volumewidget.update()
         end),
-    awful.key({ altkey }, "m",
+    awful.key({ }, "XF86AudioMute",
         function ()
             os.execute(string.format("amixer set %s toggle", volumewidget.channel))
             volumewidget.update()
@@ -540,7 +550,10 @@ globalkeys = awful.util.table.join(
                   mypromptbox[mouse.screen].widget,
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
-              end)
+              end),
+
+	--LOCK
+	awful.key({ modkey }, "l", function () awful.util.spawn("xscreensaver-command -lock") end)
 )
 
 clientkeys = awful.util.table.join(
