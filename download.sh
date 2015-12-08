@@ -31,8 +31,12 @@ if [ ! -d "awesome-copycats" ]; then
 fi
 
 if [ ! -d "awesome-copycats/lain" ]; then
+	cd awesome-copycats
 	git clone https://github.com/copycat-killer/lain.git
+	cd ..
 fi
+
+cd ..
 
 printf "\n\n###### Adding repos\n"
 printf "\t--> Google Chrome\n"
@@ -40,5 +44,3 @@ printf "\t--> Google Chrome\n"
 	cp pref/preferences /etc/apt/
 
 printf "\n\n ================ Cloning done ================\n"
-
-cd ..
