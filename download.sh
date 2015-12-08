@@ -40,7 +40,7 @@ cd ..
 
 printf "\n\n###### Adding repos\n"
 printf "\t--> Google Chrome\n"
-	cp pref/sources.list /etc/apt/
-	cp pref/preferences /etc/apt/
+	cp pref/sources.list pref/preferences /etc/apt/
+	wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 
 printf "\n\n ================ Cloning done ================\n"

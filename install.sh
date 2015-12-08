@@ -23,7 +23,7 @@ printf "\t-> maven \n"
 printf "\t-> zsh \n"
 	aptitude install zsh
 printf "\t-> ohmyszsh (need fix) \n"
-	su $1 -c "sh -c '$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)'"
+	su $1 -c "sh -c \"$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)\""
 printf "\t-> guake \n"
 	aptitude install guake
 printf "\t-> awesome \n"
@@ -40,10 +40,10 @@ cd dl
 printf "\n--> Intellij Idea"
 if [ ! -d "/home/$1/intellij" ]; then
 	mkdir /home/$1/intellij
-	if ! ls idea* 1> /dev/null 2>&1; then
+	if ! ls idea-* 1> /dev/null 2>&1; then
 		tar -xzvf idea.tar.gz
 	fi
-	cd idea*
+	cd idea-*
 	cp -r * /home/$1/intellij
 	chown $1:$1 /home/$1/intellij -R
         cd .. 
@@ -52,10 +52,10 @@ fi
 printf "\n--> CLion"
 if [ ! -d "/home/$1/clion" ]; then
 	mkdir /home/$1/clion
-	if ! ls clion* 1> /dev/null 2>&1; then
+	if ! ls clion-* 1> /dev/null 2>&1; then
 		tar -xzvf clion.tar.gz
 	fi
-	cd clion*
+	cd clion-*
 	cp -r * /home/$1/clion
         chown $1:$1 /home/$1/clion -R
 	cd .. 
