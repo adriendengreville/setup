@@ -12,8 +12,6 @@ printf "\t-> build-essential \n"
 	aptitude install build-essential
 printf "\t-> cmake \n"
 	aptitude install cmake
-printf "\t-> aria2c \n"
-	aptitude install aria2
 printf "\t-> proxychains \n"
 	aptitude install proxychains
 printf "\t-> git \n"

@@ -5,6 +5,9 @@ cd dl
 
 printf "========== Cloning from repos ==========\n"
 
+printf "\t-> Getting aria2c \n"
+        apt-get install aria2
+
 printf "###### Guake theme \n"
 if [ ! -d "guake-colors-solarized" ]; then
 	git clone https://github.com/coolwanglu/guake-colors-solarized.git
@@ -17,12 +20,12 @@ fi
 
 printf "\n\n###### Downloading Intellij\n"
 if [ ! -f "idea.tar.gz" ]; then
-	wget http://repo.dengreville.fr/soft/idea.tar.gz
+	aria2c -c -x 5 http://repo.dengreville.fr/soft/idea.tar.gz
 fi
 
 printf "\n\n###### Downloading CLion\n"
 if [ ! -f "clion.tar.gz" ]; then
-	wget http://repo.dengreville.fr/soft/clion.tar.gz
+	aria2c -c -x 5 http://repo.dengreville.fr/soft/clion.tar.gz
 fi
 
 printf "\n\n###### Downloading awesome themes resources\n"

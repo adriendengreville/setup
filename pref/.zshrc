@@ -91,3 +91,4 @@ alias logisim="java -jar ~/softs/logisim-evolution.jar"
 alias intellij="/home/didien/Intellij/bin/idea.sh"
 alias lock="xscreensaver-command -lock"
 alias x=startx
+alias sleep=suspend
