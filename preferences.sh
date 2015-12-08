@@ -21,10 +21,10 @@ printf "\t-> copying awesome config \n"
 	cp pref/rc.lua /home/$1/.config/awesome/
 
 printf "\t-> setting awesome config \n"
-	if [ ! -f /etc/xdg/awesome/rc.lua ]; then
+	if [ ! -L /etc/xdg/awesome/rc.lua ]; then
 		rm /etc/xdg/awesome/rc.lua
 	fi
-	ln -s rc.lua /home/$1/.config/awesome/
+	ln -s  /home/$1/.config/awesome/rc.lua /etc/xdg/awesome/ 
 	echo "guake&
 
 source /home/$1/.zshrc
