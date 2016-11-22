@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/didien/.oh-my-zsh
 
+#My path 
+
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -55,7 +58,8 @@ plugins=(git)
 
   export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.local/bin
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -63,8 +67,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
+   export EDITOR='vim'
+ #else
 #   export EDITOR='mvim'
 # fi
 
@@ -83,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lla="ls -la"
-alias sshmeat="ssh -D 8080 didien@meatbox.org"
+alias sshmeat="ssh -D 8080 didien@meatbox.fr"
 
 #scripts maison
 alias hex2bin="~/scripts/hex2bin.sh"
@@ -98,3 +102,7 @@ alias swtchto="sudo netctl switch-to"
 alias rfspawn="sudo rfkill unblock all"
 alias net="wland;rfspawn;swtchto"
 alias monip="proxychains wget http://ipinfo.io/ip -qO -"
+alias voff="xset dpms force off"
+alias m="cmake .. && make"
+alias screen=gnome-screenshot
+alias key=setxkbmap
