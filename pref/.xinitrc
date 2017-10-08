@@ -1,13 +1,11 @@
-#guake&
 nm-applet&
 source $HOME/.zshrc
-#pamusb-agent&
-#xscreensaver -no-splash &
+xscreensaver -no-splash &
+xss-lock -- xscreensaver-command -lock&
 $HOME/scripts/xscreensaverstopper.sh&
 setxkbmap fr
-#/home/didien/scripts/wall.sh&
-#google-drive-ocamlfuse gdrive&
+~/scripts/wall.sh&
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-#redshift-gtk&
+redshift-gtk&
 source ~/.zshrc
 exec awesome

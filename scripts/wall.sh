@@ -3,8 +3,7 @@
 # Created by djazz // Dangershy
 # Dependencies: feh
 #
-env > /home/didien/grr2
-FOLDER="/home/didien/Pictures/wallpapers"
+FOLDER="~/wallpapers"
 DELAY=10
 
 # to make it loop over lines instead of spaces in filenames

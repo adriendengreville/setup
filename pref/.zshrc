@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias lla="ls -la"
 alias sshmeat="ssh -D 8080 didien@meatbox.fr"
 
-#scripts maison
+#scripts & aliases 
 alias hex2bin="~/scripts/hex2bin.sh"
 alias logisim="java -jar ~/softs/logisim-evolution.jar"
 alias intellij="/home/didien/Intellij/bin/idea.sh"
@@ -106,3 +106,4 @@ alias voff="xset dpms force off"
 alias m="cmake .. && make"
 alias screen=gnome-screenshot
 alias key=setxkbmap
+alias steam="LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam"
