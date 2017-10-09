@@ -56,7 +56,7 @@ install network-manager-applet
 install jdk9-openjdk
 install vim
 install maven
-install google-chome
+install google-chrome
 install jetbrains-toolbox
 install atom
 install docker
@@ -76,6 +76,7 @@ install redshift
 install unzip
 install wireshark-qt
 install wget
+install i3lock
 install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 show "-> Install spotify by hand"
