@@ -43,4 +43,4 @@ sudo modprobe loop
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 sudo usermod -aG $(whoami)
-newgrp docker
+#newgrp docker
