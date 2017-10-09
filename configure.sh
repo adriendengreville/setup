@@ -47,3 +47,10 @@ newgrp docker
 
 show "-> Generate RSA keys"
 cat /dev/zero | ssh-keygen -b 4096 -q -N ""
+
+show "-> Enable network manager"
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
+
+show "-> Configure i3lock"
+echo 1 | yaourt i3lock-fancy-git --noconfirm
