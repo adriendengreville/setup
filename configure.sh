@@ -29,7 +29,7 @@ cp -r wallpapers ~
 
 show "-> Configure session"
 cp ./pref/.zshrc ~/.zshrc
-cp ./pref/.xinit ~/.xinitrc
+cp ./pref/.xinitrc ~/.xinitrc
 cp ./pref/.Xresources ~/.Xresources
 cp ./pref/.vimrc ~/.vimrc
 
