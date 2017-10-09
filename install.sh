@@ -4,7 +4,7 @@ function show {
 }
 
 function install {
-	pacman -S $1
+	sudo pacman -S $1 --noconfirm
 }
 
 function fetch {
