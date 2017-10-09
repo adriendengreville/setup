@@ -42,5 +42,5 @@ sudo tee /etc/modules-load.d/loop.conf <<< "loop"
 sudo modprobe loop
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
-sudo usermod -aG $USER
-#newgrp docker
+sudo usermod -aG docker $USER
+newgrp docker
