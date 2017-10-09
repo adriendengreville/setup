@@ -4,7 +4,7 @@ function show {
 }
 
 function install {
-	pacman -S $1
+	sudo pacman -S $1 --noconfirm
 }
 
 function fetch {
@@ -18,7 +18,7 @@ function fetch_r {
 show "========== Configuration =========="
 
 show "-> Apply awesome config"
-cp ./pref/.rc.lua ~/.config/awesome
+cp ./pref/rc.lua ~/.config/awesome
 
 show "-> Pimp it"
 fetch https://github.com/powerline/fonts
@@ -29,7 +29,7 @@ cp -r wallpapers ~
 
 show "-> Configure session"
 cp ./pref/.zshrc ~/.zshrc
-cp ./pref/.xinit ~/.xinit
+cp ./pref/.xinit ~/.xinitrc
 cp ./pref/.Xresources ~/.Xresources
 cp ./pref/.vimrc ~/.vimrc
 
