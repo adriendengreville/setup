@@ -75,6 +75,7 @@ install pavucontrol
 install redshift
 install unzip
 install wireshark-qt
+install wget
 install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 show "-> Install spotify by hand"
