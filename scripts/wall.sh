@@ -3,7 +3,7 @@
 # Created by djazz // Dangershy
 # Dependencies: feh
 #
-FOLDER="~/wallpapers"
+FOLDER="$HOME/wallpapers"
 DELAY=10
 
 # to make it loop over lines instead of spaces in filenames
