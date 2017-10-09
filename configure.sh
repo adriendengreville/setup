@@ -44,3 +44,6 @@ sudo systemctl enable docker.service
 sudo systemctl start docker.service
 sudo usermod -aG docker $USER
 newgrp docker
+
+show "-> Generate RSA keys"
+cat /dev/zero | ssh-keygen -b 4096 -q -N ""
