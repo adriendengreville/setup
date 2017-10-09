@@ -40,7 +40,12 @@ install xf86-input-synaptics
 show "\tAwesome"
 install awesome
 mkdir -p ~/.config/awesome/
-fetch_r https://github.com/lcpz/awesome-copycats.git
+fetch https://github.com/lcpz/awesome-copycats.git
+cd awesome-copycats
+rm -rf lain freedesktop
+fetch https://github.com/lcpz/awesome-freedesktop.git freedesktop
+fetch https://github.com/lcpz/lain.git
+cd ..
 mv -bv awesome-copycats/* ~/.config/awesome
 rm -rf awesome-copycats
 
